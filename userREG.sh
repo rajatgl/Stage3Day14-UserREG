@@ -55,3 +55,17 @@ then
 else
         echo "Invalid Format"
 fi
+
+read -p "Passwors : " PASSWORD
+
+#Password Pattern
+PASSWORD_PATTERN="[0-9a-zA-Z@$]{8,}"
+
+#Password Validation
+if [[ $PASSWORD =~ $PASSWORD_PATTERN ]]
+then
+        echo "Valid Format"
+else
+        echo "Invalid Format"
+fi
+
