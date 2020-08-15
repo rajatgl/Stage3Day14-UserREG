@@ -42,3 +42,16 @@ then
 else
         echo "Invalid Format"
 fi
+
+read -p "Phone number : " PHONENUMBER
+
+#PhoneNumber Pattern
+PHONE_NUMBER_PATTERN="[0-9]{2,3}[[:space:]][0-9]{10}"
+
+#Email Validation
+if [[ $PHONENUMBER =~ $PHONE_NUMBER_PATTERN ]]
+then
+        echo "Valid Format"
+else
+        echo "Invalid Format"
+fi
